@@ -1,0 +1,104 @@
++-----------------------------------------+
+|            User Authentication          |
++-----------------------------------------+
+| - Username: string                     |
+| - Password: string                     |
++-----------------------------------------+
+| + Register(): bool                     |
+| + Login(): bool                        |
+| + Logout(): void                       |
+| + IsAuthenticated(): bool              |
+| + GetRoles(): List<string>             |
+| + GrantAccess(role: string): bool      |
+| + RevokeAccess(role: string): bool     |
++-----------------------------------------+
+
++-----------------------+     +-----------------------+
+|    Dashboard          |     |   Navigation          |
++-----------------------+     +-----------------------+
+| - Widgets: List<Widget>|     | - Items: List<MenuItem>|
++-----------------------+     +-----------------------+
+| + AddWidget(widget: Widget): void   |
+| + RemoveWidget(widget: Widget): void|
+| + NavigateTo(menuItem: MenuItem): void|
++-----------------------+     +-----------------------+
+
++-----------------------+
+|   Product Management  |
++-----------------------+
+| - ProductID: int      |
+| - Name: string        |
+| - Description: string |
+| - Price: decimal      |
+| - Category: string    |
+| - StockQuantity: int  |
++-----------------------+
+| + AddProduct(): void  |
+| + EditProduct(): void |
+| + DeleteProduct(): void|
+| + ListProducts(): List<Product>|
+| + SearchProducts(query: string): List<Product>|
++-----------------------+
+
++-----------------------+
+|  Inventory Tracking   |
++-----------------------+
+| - Product: Product    |
+| - Quantity: int       |
++-----------------------+
+| + UpdateQuantity(): void|
+| + GetQuantity(): int |
+| + SetThreshold(threshold: int): void|
+| + GetThreshold(): int|
++-----------------------+
+
++-----------------------+
+|   Sales Management    |
++-----------------------+
+| - SaleID: int         |
+| - Date: DateTime      |
+| - Customer: Customer  |
+| - Products: List<Product>|
+| - TotalAmount: decimal|
++-----------------------+
+| + CreateSale(): void  |
+| + AddProductToSale(): void|
+| + CalculateTotal(): decimal|
+| + GenerateInvoice(): Invoice|
++-----------------------+
+
++-----------------------+
+|   Supplier Management |
++-----------------------+
+| - SupplierID: int     |
+| - Name: string        |
+| - ContactInfo: string |
+| - Products: List<Product>|
++-----------------------+
+| + AddSupplier(): void |
+| + EditSupplier(): void|
+| + DeleteSupplier(): void|
+| + ListSuppliers(): List<Supplier>|
+| + SearchSuppliers(query: string): List<Supplier>|
++-----------------------+
+
++-----------------------+
+| Reporting and Analytics|
++-----------------------+
+| - ReportType: string  |
+| - Data: object        |
++-----------------------+
+| + GenerateReport(): Report|
+| + ExportReport(format: string): void|
++-----------------------+
+
++-----------------------+
+| Search and Filter     |
++-----------------------+
+| - SearchQuery: string |
+| - Filters: List<Filter>|
++-----------------------+
+| + Search(query: string): List<SearchResult>|
+| + ApplyFilter(filter: Filter): List<SearchResult>|
+| + ClearFilters(): void|
++-----------------------+
